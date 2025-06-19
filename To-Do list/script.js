@@ -21,8 +21,10 @@ function taskAdd(){
 addBtn.addEventListener('click', function() {
     taskAdd();
 });
-addBtn.addEventListener('keydown', function(){
-    taskAdd();
+inputBox.addEventListener('keydown', function(event){
+    if(event.key === "Enter"){
+        taskAdd();
+    }
 });
 
 //Click funtion
