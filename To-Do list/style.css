@@ -77,6 +77,8 @@ ul li.checked{
 }
 ul li.checked::before{
     background: url(images/checked.png);
+    background-size: cover;
+    background-position: center;
 }
 ul li span{
     position: absolute;
