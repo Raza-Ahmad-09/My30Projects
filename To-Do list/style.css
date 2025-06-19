@@ -10,3 +10,9 @@
     background: linear-gradient(135deg, rgb(38, 38, 169), rgb(87, 18, 87), black);
     padding: 10px;
 }
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background-color: white;
+    margin: 100px auto 25px; 
+}
