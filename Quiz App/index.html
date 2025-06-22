@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
+    <Button id="start">Start Quiz</Button>
+    <Button id="restart">Restart Quiz</Button>
     <div class="container">
         <div class="app-box">
             <div class="head">
@@ -15,7 +17,7 @@
                 <h2>Quiz Application</h2>
                 <button class="reward"><i class="fa-solid fa-award"></i></button>
             </div>
-            <div class="question"><h2>No. of Questions</h2>
+            <div class="question"><h2>Score</h2>
 
                 <!--counter-->
                <div class="skill">
@@ -29,13 +31,13 @@
                      <circle class="progress-circle-background" cx="80" cy="80" r="28"></circle>
                      <circle class="progress-circle-progress" cx="80" cy="80" r="28" style="--progress: 0.75"></circle>
                  </svg>
-                     <div class="progress-text"><span>1</span>/30</div>
+                     <div class="progress-text"><p id="score-text">0/10</p></div>
                     </div>
                </div>
             </div>
 
              <!--Question Area-->
-             <div class="question-text"></div>
+             <div class="question-text"><p id="question">this is question</p></div>
 
             <!--Timer-->
             <div class="time">
@@ -46,32 +48,32 @@
                  <div class="timer-text" id="timerText">60 seconds</div>
             </div>
     
-            <!--options-->
-            <div class="options-box">
-                <button class="options">
-                <div class="symbol">A</div>
-                
-                <div class="select"></div>
-                </button>
-                <button class="options">
-                <div class="symbol">B</div>
-                
-                <div class="select"></div>
-                 </button>
-                <button class="options">
-                <div class="symbol">C</div>
-                
-                <div class="select"></div>
-                </button>
-                <button class="options">
-                <div class="symbol">D</div>
-                
-                <div class="select"></div>
-                </button>
-                
+           <div class="options-box">
+    <button class="options" data-option="A">
+        <div class="symbol">A</div>
+        <p class="inneropt">Option A</p>
+        <div class="select"></div>
+    </button>
+    <button class="options" data-option="B">
+        <div class="symbol">B</div>
+        <p class="inneropt">Option B</p>
+        <div class="select"></div>
+    </button>
+    <button class="options" data-option="C">
+        <div class="symbol">C</div>
+        <p class="inneropt">Option C</p>
+        <div class="select"></div>
+    </button>
+    <button class="options" data-option="D">
+        <div class="symbol">D</div>
+        <p class="inneropt">Option D</p>
+        <div class="select"></div>
+    </button>
+
 
             </div>
-            <button class="submit">Submit Answer</button>
+            <button class="submit" id="submit">Submit Answer</button>
+            </div>
         </div>
     </div>
 

@@ -10,7 +10,7 @@ body{
 }
 .container{
     width: 100%;
-    
+    display: none;
 }
 .head{
     display: flex;
@@ -216,3 +216,38 @@ button{
     background: linear-gradient(to left, pink, rgb(255, 176, 29), skyblue);
     display: none;
 }
+
+#start{
+    height: 3rem;
+    width: 7rem;
+    background: linear-gradient(to left, pink, rgb(255, 176, 29), skyblue);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgb(239, 123, 142);
+    align-items: center;
+    justify-content: center;
+    margin-top: 16rem;
+    margin-left: 40rem;   
+}
+#restart{
+    height: 3rem;
+    width: 7rem;
+    background: linear-gradient(to left, pink, rgb(255, 176, 29), skyblue);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgb(239, 123, 142);
+    align-items: center;
+    justify-content: center;
+    margin-top: 16rem;
+    margin-left: 40rem;   
+    display: none;
+}
+
+.correct{
+    background-color: rgba(118, 255, 118, 0.604);
+}
+.incorrect{
+    background-color: rgba(251, 119, 119, 0.622);
+}
+
+
