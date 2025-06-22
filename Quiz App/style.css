@@ -51,7 +51,7 @@ button{
 .app-box{
     width: 60%;
     background-color: white;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 16rem;
     border-radius: 10px;
     display: flex;
@@ -62,7 +62,6 @@ button{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1rem;
 }
 .question h2{
     padding-left: 2rem;
@@ -131,11 +130,12 @@ button{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 6rem;
 }
 .timer-container {
-    width: 80%;
-    max-width: 500px;
+    width: 60%;
+    max-width: 300px;
     background-color: #e0e0e0;
     border-radius: 5px;
     overflow: hidden;
@@ -150,4 +150,69 @@ button{
 .timerText{
     margin-right: 1rem;
     font-size: 1rem;
+}
+
+/* Question  */
+.question-text{
+    display: flex;
+    width: 80%;
+    height: 20vh;
+    background: linear-gradient(to right, pink, rgb(255, 176, 29), skyblue);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    font-size: 1.5rem;
+    margin-left: 5rem;
+    margin-bottom: 1rem;
+}
+/* options */
+
+.options{
+    display: flex;
+    flex-direction: row;
+    height: 2.5rem;
+    width: 80%;
+    margin-top: 0.6rem;
+    align-items: center;
+    justify-content: space-between; 
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgb(0, 0,0, 0.15);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.options:hover{
+    background: linear-gradient(to right, pink, rgb(255, 176, 29), skyblue);
+    transform: translate(2s ease);
+}
+.symbol{
+    height: 20px;
+    width: 20px;
+    background-color: rgba(128, 128, 128, 0.194);
+    float: left;
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+}
+.options-box{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+}
+.submit{
+    height: 2.5rem;
+    width: 80%;
+    margin-top: 2.5rem;
+    align-items: center;
+    border: none;
+    margin-left: 5rem;  
+    margin-bottom: 2rem;
+    box-shadow: 1px 1px 1px 1px rgb(0, 0,0, 0.15);
+    border-radius: 10px;
+    background: linear-gradient(to left, pink, rgb(255, 176, 29), skyblue);
+    display: none;
 }
