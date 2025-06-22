@@ -11,15 +11,30 @@
     <div class="container">
         <div class="app-box">
             <div class="head">
-                <div class="back-arrow"><i class="fa-solid fa-arrow-left"></i></div>
+                <button class="back-arrow"><i class="fa-solid fa-arrow-left"></i></button>
                 <h2>Quiz Application</h2>
-                <div class="reward"><i class="fa-solid fa-award"></i></div>
+                <button class="reward"><i class="fa-solid fa-award"></i></button>
             </div>
             <div class="question"><h2>No. of Questions</h2>
-               
+               <div class="skill">
+                
+                   <div class="progress-container">
+        <svg class="progress-circle" viewBox="0 0 160 160">
+            <lineargradient id="gradient">
+                <stop offset="0%" stop-color="#4caf50"></stop>
+                <stop offset="100%" stop-color="#f44336"></stop>
+            </lineargradient>
+            <circle class="progress-circle-background" cx="80" cy="80" r="28"></circle>
+            <circle class="progress-circle-progress" cx="80" cy="80" r="28" style="--progress: 0.75"></circle>
+        </svg>
+        <div class="progress-text"><span>1</span>/30</div>
+    </div>
+               </div>
             </div>
         </div>
     </div>
+
+   
     <script src="script.js"></script>
 </body>
 </html>
