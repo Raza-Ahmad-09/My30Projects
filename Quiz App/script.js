@@ -95,6 +95,7 @@ let selectedOption = null;
 function startQuiz() {
     currentQuestionidx = 0;
     score = 0;
+    startCountdown();
     showQuestion();
 }
 
@@ -147,8 +148,8 @@ function checkAnswer() {
             button.classList.add('correct');
         } else if (button === selectedOption && !isCorrect) {
             button.classList.add('incorrect');
-        }
-        button.onclick = null; // Disable further clicks
+        } 
+        button.onclick = null; 
     });
     myScore.textContent = `${score + (isCorrect ? 1 : 0)}/${questions.length}`;
     if (isCorrect) score++;
@@ -160,15 +161,7 @@ function checkAnswer() {
 }
 
 function nextQuestion() {
-    currentQuestionidx++;
-    if (currentQuestionidx < questions.length) {
-        showQuestion();
-    } else {
-        // Quiz completed
-        questionElement.innerHTML = `Quiz Completed! Your score: ${score}/${questions.length}`;
-        optionButtons.forEach(button => button.style.display = "none");
-        submitBtn.style.display = "none";
-    }
+   
 }
 
 // Initialize quiz
