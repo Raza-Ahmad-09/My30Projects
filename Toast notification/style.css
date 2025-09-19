@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background: radial-gradient(circle, #83e9 , #000);
+}
+.contaier{
+    width: 90%;
+    padding: 2rem;
+    display: flex;
+}
+button{
+    margin: 2rem;
+    height: 3rem;
+    width: 8rem;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+#toast-box{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+.toast{
+    width: 400px;
+    height: 80px;
+    background-color: #fff;
+    font-weight: bolder;
+    margin: 15px 0;
+    box-shadow: 0 0 20px gray;
+    display: flex;
+    align-items: center;
+    position:relative;
+    padding-left: 1rem;
+    transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: green;
+}
+@keyframes moveleft {
+    100%{
+        transform: translateX(0);
+    }
+}
+.toast::after{
+    content: "";
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: green;
+    height: 5px;
+    animation: anime 7s linear forwards;
+}
+@keyframes anime {
+    100%{
+        width: 0;
+    }
+}
+.toast.error{
+    font-size: 1.5rem;
+    color: red;
+}
+.toast.invalid{
+    font-size: 1.5rem;
+    color: gold;
+}
+.toast.error::after{
+    background: red;
+}
+.toast.invalid::after{
+    background: gold;
+}

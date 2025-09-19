@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator - Beta</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="input-box">
+      <div class="field">
+        <label>DAY</label>
+        <input type="number" placeholder="DD" min="1" max="31"  id="day-input">
+      </div>
+      <div class="field">
+        <label>MONTH</label>
+        <input type="number" placeholder="MM" maxlength="2" max="12" min="1" id="month-input">
+      </div>
+      <div class="field">
+        <label>YEAR</label>
+        <input type="number" placeholder="YYYY" maxlength="4" min="12" min="1" id="year-input">
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="results">
+      <div><span id="years">--</span> years</div>
+      <div><span id="months">--</span> months</div>
+      <div><span id="days">--</span> days</div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

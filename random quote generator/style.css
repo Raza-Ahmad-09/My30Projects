@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair", serif;
+}
+
+body {
+  background: linear-gradient(to right, #a3bffa, #c3dafe);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Container */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+.quote-box h2 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.quote-box h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #3b82f6;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Quote text */
+.quote-box blockquote {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+/* Author */
+.quote-box .author {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #444;
+  text-align: right;
+}
+
+/* Buttons */
+.quote-box .buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.quote-box button {
+  border: none;
+  outline: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* New Quote Button */
+#new-quote {
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+}
+
+#new-quote:hover {
+  background: #2563eb;
+}
+
+/* Tweet Button */
+#tweet {
+  background: transparent;
+  border: 2px solid #3b82f6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+#tweet img {
+  width: 18px;
+  height: 18px;
+}
+
+#tweet:hover {
+  background: #3b82f6;
+  color: #fff;
+}
+
+#tweet:hover img {
+  filter: brightness(0) invert(1);
+}

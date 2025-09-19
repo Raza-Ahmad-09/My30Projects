@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10rem;
+    padding: 2rem 4rem;
+}
+.container h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    text-shadow: 0 0 5px #39FF14,
+                
+               0 0 20px  blue;
+}
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* display: none; */
+}
+#hours{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #39FF14 3px solid;
+    box-shadow: 0 0 15px #39FF14;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+#minutes{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: blue 3px solid;
+    box-shadow: 0 0 15px blue;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+#seconds{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: red 3px solid;
+    box-shadow: 0 0 15px red;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+#ampm{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: yellow 3px solid;
+    box-shadow: 0 0 15px yellow;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
