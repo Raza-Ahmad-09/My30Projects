@@ -53,6 +53,7 @@
     text-align: center;
     margin-top: 0.5rem;
 }
-#range{
-    width: 95%;
+#progress{
+    -webkit-appearance: none;
+    
 }
