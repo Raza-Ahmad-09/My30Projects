@@ -47,6 +47,15 @@
     text-align: center;
     border: 8px solid white;
 }
+.rotateimg{
+    animation: rotate 30s infinite;
+    /* height: 1rem; */
+}
+@keyframes rotate {
+    100%{
+        rotate: 360deg;
+    }
+}
 .box h3{
     text-align: center;
     margin-top: 0.5em;

@@ -2,6 +2,7 @@ const song = document.getElementById("song");
 const progress =  document.getElementById("progess");
 const ctrlIcon = document.getElementById("ctrlIcon");
 const play = document.getElementById("play").addEventListener("click", playPause);
+const thumbImg = document.getElementById("thumbnail");
 
 song.onloadedmetadata = function(){
     progress.max = song.duration;
@@ -12,10 +13,12 @@ function playPause(){
         song.pause();
         ctrlIcon.classList.remove("fa-pause");
         ctrlIcon.classList.add("fa-play");
+        thumbImg.classList.remove("rotateimg")
     }else{
         song.play();
         ctrlIcon.classList.add("fa-pause");
         ctrlIcon.classList.remove("fa-play");
+        thumbImg.classList.add("rotateimg")
     }
 
 

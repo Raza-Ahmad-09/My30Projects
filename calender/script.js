@@ -22,7 +22,7 @@ async function getHadith() {
     const api_url =  "https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/eng-abudawud/sections/7.json";
     const response = await fetch(api_url);
     const data = await response.json();
-    
+    console.log(data)
     const hadiths = data.hadiths;
   const random = hadiths[Math.floor(Math.random() * hadiths.length)];
   hadithText.innerHTML = random.text;
