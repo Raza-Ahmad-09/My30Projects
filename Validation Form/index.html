@@ -13,31 +13,32 @@
             <i class="fa-solid fa-paper-plane"></i>
            <div class="input-group">
              <label for="">Full Name</label>
-            <input type="text" name="name" id="name" placeholder="Enter your name">
-            <span id="name-error">name is required</span>
+            <input type="text" placeholder="Enter your name" id="contact-name">
+            <span id="name-error"></span>
            </div>
 
            <div class="input-group">
             <label for="">Phone No.</label>
-            <input type="number"  id="number" placeholder="123 456 7890">
-            <span id="phone-error">phone is required</span>
+            <input type="number"  id="number" placeholder="0123 456 7890"  maxlength="11">
+            <span id="phone-error"></span>
            </div>
 
            <div class="input-group">
             <label for="">Email id</label>
-            <input type="email" name="email id="email" placeholder="Enter Email">
-            <span id="email-error">email is required</span>
+            <input type="email" id="email" placeholder="Enter Email">
+            <span id="email-error"></span>
            </div>
 
            <div class="input-group">
             <label for="">Your Massage</label>
             <textarea name="text" id="textarea" placeholder="Enter your message"></textarea>
-            <span id="textarea-error">Enter atleast 30 words</span>
+            <span id="textarea-error"></span>
            </div>
             
            <button type="submit" id="submitBtn">Submit</button>
+           <span id="submit-error"></span>
         </form>
     </div>
 </body>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </html>
