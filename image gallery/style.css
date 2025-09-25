@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fff;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#backBtn{
+    background: gray;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    left: 30%;
+}
+#nextBtn{
+    background: gray;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    right: 30%;
+}
+.gallery{
+    display: flex;
+    width: 500px;
+    overflow: scroll;
+}
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+.gallery img{
+    width: 100%;
+}
