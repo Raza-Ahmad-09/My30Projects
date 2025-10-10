@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h4 id="text">Loading...</h4>
+            <p id="punch">Loading...</p>
+            <p id="author">Loading...</p>
+        </div>
+    </div>
+</body>
+<script>
+    const text = document.getElementById("text");
+    const author = document.getElementById("author");
+    const punch = document.getElementById("punch")
+
+    fetch("https://official-joke-api.appspot.com/random_joke")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        text.innerText = data.setup;
+        punch.innerText = data.punchline;
+        author.innerText = data.type;
+    })
+    .catch(error => {
+        text.innerText = "Error loading joke.";
+        author.innerText = error;
+    })
+</script>
+</html>
