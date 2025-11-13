@@ -1,0 +1,257 @@
+/* ========== Base Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Green-900: hsl(183, 100%, 15%);
+  --Grey-500: hsl(186, 14%, 43%);
+  --Grey-400: hsl(184, 14%, 56%);
+  --Grey-200: hsl(185, 41%, 84%);
+  --Grey-50: hsl(189, 47%, 97%);
+  --White: hsl(0, 100%, 100%);
+  --Green-500: hsl(172, 66%, 48%);
+  --Green-400: hsl(172, 71%, 51%);
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  background-color: var(--Grey-200);
+}
+
+/* ========== Container ========== */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem;
+}
+
+.container img {
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  width: 100px;
+}
+
+/* ========== Box Layout ========== */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--White);
+  border-radius: 20px;
+  padding: 1rem;
+  gap: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* ========== Left Box (Inputs) ========== */
+.box-1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.bill, .tip-percent, .people {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 1rem;
+}
+
+.bill input, .option-btns input, .people input {
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  padding: 10px;
+  background-color: var(--Grey-50);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: right;
+  transition: border 0.2s ease;
+}
+
+.bill input {
+  background-image: url(images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.people input {
+  background-image: url(images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.bill input:hover,
+.bill input:focus,
+.people input:hover,
+.people input:focus,
+.option-btns input:focus {
+  border: 2px solid var(--Green-500);
+  outline: none;
+  cursor: pointer;
+}
+
+/* Hide number arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Tip Percentage Buttons */
+.option-btns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.option-btns button {
+  height: 2.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--Green-900);
+  color: var(--White);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.option-btns button:hover {
+  background-color: var(--Green-400);
+  color: var(--Green-900);
+}
+
+/* Label Adjustments */
+.label {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+
+.label label:nth-child(2) {
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* ========== Right Box (Results) ========== */
+.box-2 {
+  flex: 1;
+  background-color: var(--Green-900);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tip-amount, .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tip-amount p, .total p {
+  color: var(--White);
+  font-size: 0.9rem;
+}
+
+.tip-amount span, .total span {
+  color: var(--Grey-400);
+  font-size: 0.8rem;
+}
+
+.tip-amount h2, .total h2 {
+  color: var(--Green-400);
+  font-size: 2.2rem;
+}
+
+#reset {
+  height: 2.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--Green-400);
+  color: var(--Green-900);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 1.5rem;
+}
+
+#reset:hover {
+  background-color: var(--Green-500);
+  color: var(--White);
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 900px) {
+  .box {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .box-1, .box-2 {
+    width: 100%;
+  }
+
+  .tip-amount h2, .total h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container img {
+    width: 80px;
+  }
+
+  .box {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .option-btns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .option-btns button,
+  .option-btns input {
+    width: 100%;
+  }
+
+  .tip-amount h2, .total h2 {
+    font-size: 1.8rem;
+  }
+
+  #reset {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .tip-amount h2, .total h2 {
+    font-size: 1.5rem;
+  }
+
+  .container img {
+    width: 70px;
+  }
+
+  .option-btns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
